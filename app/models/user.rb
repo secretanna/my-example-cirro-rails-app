@@ -12,6 +12,7 @@ class User < ApplicationRecord
   devise :omniauthable, omniauth_providers: %i[cirro]
 
   validates :screenname, presence: true
+  validates :new_field, presence: true
 
   after_commit :create_or_update_app_worker, on: :update
 

@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 2021_01_15_101125) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "provider"
     t.string "uid"
+    t.string "new_field"
     t.string "cirro_access_token"
     t.text "languages"
     t.text "domains"

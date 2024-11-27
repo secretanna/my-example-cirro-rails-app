@@ -9,6 +9,8 @@ class UsersController < ApplicationController
     @user.assign_attributes(user_params)
     @user.languages= @user.languages.reject!(&:blank?)
     @user.domains= @user.domains.reject!(&:blank?)
+    return if user.new_field.blank?
+    
     if @user.save
       redirect_to edit_user_path(@user), notice: 'Profile updated successfully'
     else

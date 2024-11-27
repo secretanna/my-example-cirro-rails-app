@@ -15,6 +15,7 @@ class TranslationResultsController < ApplicationController
   end
 
   def update
+    # some annessecery change here
     file = params[:translation_result][:file].find { |f| !f.blank? }
     @translation_result = current_user.translation_results.find(params[:id])
     @translation_result.file = file
